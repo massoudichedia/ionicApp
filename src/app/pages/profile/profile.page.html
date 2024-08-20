@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Profile</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="content" class="ion-padding">
+  <div class="card-container">
+    <ion-card>
+      <ion-card-content>
+        <div class="profile-section">
+          <div class="avatar">
+            <img [src]="profileImageUrl" alt="Profile Picture" class="profile-image">
+            <ion-icon name="create" class="update-icon" (click)="openFilePicker()"></ion-icon>
+          </div>
+          <input type="file" (change)="onFileSelected($event)" accept="image/*" id="file-input" style="display: none;">
+        </div>
+
+        <!-- Informations de profil -->
+        <div class="info-section">
+          <div class="info-item">
+            <ion-icon name="person-outline" class="info-icon"></ion-icon>
+            <ion-input [(ngModel)]="bio" placeholder="Enter your bio"></ion-input>
+          </div>
+          <div class="info-item">
+            <ion-icon name="football-outline" class="info-icon"></ion-icon>
+            <ion-input [(ngModel)]="description" placeholder="Enter description"></ion-input>
+          </div>
+        </div>
+
+        <!-- Bouton pour confirmer la mise à jour -->
+        <ion-button expand="full" (click)="confirmUpdate()">Confirm Update</ion-button>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="chat" routerLink="/account">
+      <ion-icon name="chatbubbles-outline"></ion-icon>
+      <ion-label>Chat</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="settings" routerLink="/settings">
+      <ion-icon name="settings-outline"></ion-icon>
+      <ion-label>Settings</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="notifications" routerLink="/dashboard">
+      <ion-icon name="home-outline"></ion-icon>
+      <ion-label>Dashboard</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-footer>

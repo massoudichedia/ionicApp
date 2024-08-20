@@ -1,0 +1,78 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title style="color: #3880ff;">Create Match</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <form (ngSubmit)="submitForm()">
+    <!-- Match Title -->
+    <ion-item>
+      <ion-icon slot="start" name="trophy-outline" style="color: #3880ff;"></ion-icon>
+      <ion-label position="floating" style="color: #3880ff;">Match Title</ion-label>
+      <ion-input [(ngModel)]="matchTitle" name="matchTitle"></ion-input>
+    </ion-item>
+
+    <!-- Date and Time -->
+    <ion-item>
+      <ion-icon slot="start" name="calendar-outline" style="color: #3880ff;"></ion-icon>
+      <ion-label position="floating" style="color: #3880ff;">Date and Time</ion-label>
+      <ion-datetime [(ngModel)]="dateTime" name="dateTime"></ion-datetime>
+    </ion-item>
+
+    <!-- Location -->
+    <ion-item>
+      <ion-icon slot="start" name="pin-outline" style="color: #3880ff;"></ion-icon>
+      <ion-label position="floating" style="color: #3880ff;">Location</ion-label>
+      <ion-input [(ngModel)]="location" name="location"></ion-input>
+    </ion-item>
+
+    <!-- Description -->
+    <ion-item>
+      <ion-icon slot="start" name="document-text-outline" style="color: #3880ff;"></ion-icon>
+      <ion-label position="floating" style="color: #3880ff;">Description</ion-label>
+      <ion-textarea [(ngModel)]="description" name="description"></ion-textarea>
+    </ion-item>
+
+    <!-- Number of Players Required -->
+    <ion-item>
+      <ion-icon slot="start" name="people-outline" style="color: #3880ff;"></ion-icon>
+      <ion-label position="floating" style="color: #3880ff;">Number of Players Required</ion-label>
+      <ion-input type="number" [(ngModel)]="numPlayers" name="numPlayers"></ion-input>
+    </ion-item>
+
+    <!-- Match Public or Private -->
+    <ion-list>
+      <ion-radio-group [(ngModel)]="visibility" name="visibility">
+        <ion-list-header>
+          <ion-icon name="eye-outline" style="color: #3880ff;"></ion-icon>
+          <ion-label style="color: #3880ff;">Match Visibility</ion-label>
+        </ion-list-header>
+
+        <ion-item>
+          <ion-label style="color: #3880ff;">Public</ion-label>
+          <ion-radio slot="start" value="public"></ion-radio>
+        </ion-item>
+
+        <ion-item>
+          <ion-label style="color: #3880ff;">Private</ion-label>
+          <ion-radio slot="start" value="private"></ion-radio>
+        </ion-item>
+      </ion-radio-group>
+    </ion-list>
+
+    <!-- Submit Button -->
+    <ion-button expand="block" type="button" style="background-color: #3880ff; color: white;">
+      <ion-icon slot="start" name="checkmark-outline"></ion-icon>
+      Create Match
+    </ion-button>
+
+    <!-- Update Button -->
+    <ion-button expand="block" type="submit" style="background-color: #ffc107; color: white;">
+      <ion-icon slot="start" name="create-outline"></ion-icon>
+      Update Match
+    </ion-button>
+
+   
+  </form>
+</ion-content>

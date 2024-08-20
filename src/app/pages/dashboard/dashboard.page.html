@@ -1,0 +1,63 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Dashboard</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <ion-row>
+      <!-- Card: Update Profile -->
+      <ion-col size="12" size-md="3">
+        <ion-card (click)="goToProfile()">
+          <ion-card-header>
+            <ion-card-title>Update Profile</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-icon name="person-outline" style="font-size: 50px; color: #3880ff;"></ion-icon>
+            <p>Update your profile details</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+
+      <!-- Card: Notifications -->
+      <ion-col size="12" size-md="3">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>Notifications</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-icon name="notifications-outline" style="font-size: 50px; color: #3880ff;"></ion-icon>
+            <p>View your notifications</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+
+      <!-- Card: Create Match -->
+      <ion-col size="12" size-md="3">
+        <ion-card (click)="goToMatch()">
+          <ion-card-header>
+            <ion-card-title>Create Match</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-icon name="football-outline" style="font-size: 50px; color: #3880ff;"></ion-icon>
+            <p>Create your Match</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+
+      <!-- Card: Journal -->
+      <ion-col size="12" size-md="3">
+        <ion-card (click)="goToJournals()">
+          <ion-card-header>
+            <ion-card-title>Journal</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-icon name="document-text-outline" style="font-size: 50px; color: #3880ff;"></ion-icon>
+            <p>Access your journal entries</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

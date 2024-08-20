@@ -1,0 +1,81 @@
+/* Applique le fond noir à tout le contenu */
+.content {
+  background-color: black; /* Fond noir */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Occupe toute la hauteur de la fenêtre */
+  margin: 0; /* Supprime les marges */
+}
+
+/* Conteneur pour centrer la carte */
+.card-container {
+  width: 90%; /* Ajustez la largeur selon vos besoins */
+  max-width: 500px; /* Largeur maximale de la carte */
+}
+
+/* Styles pour la carte */
+ion-card {
+  background-color: white; /* Fond blanc pour la carte */
+  border-radius: 15px; /* Bords arrondis */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Ombre légère */
+}
+
+/* Styles pour la section de profil */
+.profile-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 20px; /* Ajoutez de l'espace sous la section */
+}
+
+/* Styles pour l'avatar */
+.avatar {
+  position: relative;
+  width: 100px; /* Ajustez la taille selon vos besoins */
+  height: 100px; /* Ajustez la taille selon vos besoins */
+}
+
+.profile-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover; /* Assure que l'image garde ses proportions */
+}
+
+/* Styles pour l'icône de mise à jour */
+.update-icon {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: white;
+  border-radius: 50%;
+  padding: 5px;
+  font-size: 24px; /* Ajustez la taille selon vos besoins */
+}
+
+/* Styles pour la section d'informations */
+.info-section {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px; /* Ajoutez de l'espace sous la section */
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px; /* Espacement entre les éléments */
+}
+
+.info-icon {
+  font-size: 24px; /* Ajustez la taille selon vos besoins */
+  margin-right: 10px; /* Espacement entre l'icône et le texte */
+}
+
+ion-input {
+  --padding-start: 0; /* Supprime l'espacement par défaut */
+  --padding-end: 0; /* Supprime l'espacement par défaut */
+  --background: transparent; /* Arrière-plan transparent */
+}
