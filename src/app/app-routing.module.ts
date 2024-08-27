@@ -64,6 +64,18 @@ const routes: Routes = [
     path: 'profile',
     loadChildren: () => import('./pages/profile/profile.module').then( m => m.ProfilePageModule)
   },
+  {
+    path: 'chat',
+    loadChildren: () => import('./pages/chat/chat.module').then( m => m.ChatPageModule)
+  },
+  {
+    path: 'select-contacts',
+    loadChildren: () => import('./pages/select-contacts/select-contacts.module').then( m => m.SelectContactsPageModule)
+  },
+  {
+    path: 'invitation',
+    loadChildren: () => import('./pages/invitation/invitation.module').then( m => m.InvitationPageModule)
+  },
   
 ];
 
